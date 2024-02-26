@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .section-header {
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            margin-top: 20px;
+        }
+        .section-2-header {
+            text-decoration: underline;
+        }
+        .survey-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: calc(100% - 20px);
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            height: 100px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+    <!-- <style>
+        .survey-container {
+            width: 50%;
+            margin: auto;
+        }
+        .question {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .question label, .question input, .question textarea {
+            display: block;
+            margin: 5px 0;
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="survey-container">
+        <h2>Survey Questions</h2>
+        
+        <!-- Section 2 -->
+        <h3 class="section-2-header">Section 2</h3>
+        <form action="/submit" method="post">
+            <!-- Existing questions here -->
+            <!-- Question 1 -->
+            <div class="question">
+                <h4>Question 1</h4>
+                <label>Lorem ipsum dolor sit amet?</label>
+                <input type="radio" name="question1" value="Option 1"> Option 1
+                <input type="radio" name="question1" value="Option 2"> Option 2
+                <input type="radio" name="question1" value="Option 3"> Option 3
+                <input type="radio" name="question1" value="Option 4"> Option 4
+            </div>
+            <!-- Yes/No question -->
+            <div class="question">
+                <label>Yes or No</label>
+                <input type="radio" name="terms" value="Yes"> Yes
+                <input type="radio" name="terms" value="No"> No
+            </div>
+
+            <!-- input box -->
+            <!-- Comment box -->
+            <div class="question">
+                <label for="comments">Input Box:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Your comments here..."></textarea>
+            </div>
+
+            <!-- multiple choice -->
+            <div class="question">
+                <label>Multiple Choice</label>
+                <input type="radio" name="question4" value="Option 1"> Option 1
+                <input type="radio" name="question4" value="Option 2"> Option 2
+                <input type="radio" name="question4" value="Option 3"> Option 3
+                <input type="radio" name="question4" value="Option 4"> Option 4
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
